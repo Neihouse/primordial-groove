@@ -1,0 +1,28 @@
+# .cursorrules
+# Work in Progress Cursor Rules for Primordial Groove Project
+
+rules:
+  - name: "Header Navigation Links"
+    description: "Ensure all navigation links in the header are accessible and styled correctly."
+    selector: "header nav ul li a"
+    properties:
+      - "color: white"
+      - "text-decoration: none"
+      - "font-weight: bold"
+
+  - name: "Hero Section Background"
+    description: "Ensure the hero section has the correct background image and styling."
+    selector: "#hero"
+    properties:
+      - "background: url('images/hero-bg.jpg') no-repeat center center/cover"
+      - "color: white"
+      - "text-align: center"
+      - "padding: 5em 1em"
+
+  - name: "Form Elements"
+    description: "Ensure all form elements are styled correctly and accessible."
+    selector: "form input, form textarea"
+    properties:
+      - "padding: 0.5em"
+      - "border: 1px solid #ccc"
+
