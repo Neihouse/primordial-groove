@@ -1,0 +1,119 @@
+.section {
+  padding: var(--mantine-spacing-md);
+}
+
+.imageSection {
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+}
+
+.title {
+  font-family: 'Greycliff CF', var(--mantine-font-family);
+  font-weight: 900;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-white));
+  line-height: 1.2;
+  font-size: rem(32px);
+  margin-bottom: var(--mantine-spacing-md);
+}
+
+.description {
+  max-width: rem(600px);
+  margin: 0 auto var(--mantine-spacing-xl) auto;
+}
+
+.card {
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+
+  @mixin hover {
+    transform: translateY(-5px);
+    box-shadow: var(--mantine-shadow-md);
+  }
+}
+
+.image {
+  object-fit: cover;
+  border-radius: var(--mantine-radius-md);
+}
+
+.artistName {
+  font-family: 'Greycliff CF', var(--mantine-font-family);
+  line-height: 1.2;
+}
+
+.skill {
+  flex: 1;
+  min-width: calc(50% - var(--mantine-spacing-xs));
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: var(--mantine-font-size-xs);
+  font-weight: 700;
+}
+
+.like {
+  color: var(--mantine-color-red-6);
+  width: 20px;
+  height: 20px;
+  transition: transform 200ms ease;
+
+  @mixin hover {
+    transform: scale(1.2);
+  }
+}
+
+.carousel {
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--mantine-spacing-xl) 0;
+
+  @media (max-width: var(--mantine-breakpoint-sm)) {
+    padding: var(--mantine-spacing-md) 0;
+  }
+}
+
+.controls {
+  transition: opacity 150ms ease;
+  opacity: 0;
+}
+
+.root:hover .controls {
+  opacity: 1;
+}
+
+.indicator {
+  width: rem(12px);
+  height: rem(4px);
+  transition: width 250ms ease;
+  background-color: var(--mantine-color-violet-filled);
+
+  &[data-active] {
+    width: rem(40px);
+  }
+}
+
+@media (max-width: var(--mantine-breakpoint-sm)) {
+  .card {
+    padding: var(--mantine-spacing-sm);
+  }
+
+  .image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .skill {
+    min-width: 100%;
+  }
+
+  .controls {
+    opacity: 1;
+  }
+}
