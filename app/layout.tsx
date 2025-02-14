@@ -2,11 +2,13 @@ import '@mantine/core/styles.css';
 
 import React from 'react';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
+import { FooterCentered } from '@/components/FooterCentered/FooterCentered';
+import { HeaderSimple } from '@/components/HeaderSimple/HeaderSimple';
 import { theme } from '../theme';
 
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'Primordial Groove',
+  description: 'Building The Bay Area Underground',
 };
 
 export default function RootLayout({ children }: { children: any }) {
@@ -21,7 +23,11 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme} defaultColorScheme="dark">
+          <HeaderSimple />
+          <main>{children}</main>
+          <FooterCentered />
+        </MantineProvider>
       </body>
     </html>
   );
