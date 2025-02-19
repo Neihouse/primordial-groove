@@ -1,0 +1,360 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./components/FeaturesCards/FeaturesCards.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+.FeaturesCards_title__DusMl {
+  font-size: calc(1.5rem * var(--mantine-scale));
+  font-weight: 900;
+  text-align: center;
+}
+
+  @media (min-width: var(--mantine-breakpoint-sm)) {.FeaturesCards_title__DusMl {
+    font-size: calc(2.125rem * var(--mantine-scale))
+}
+  }
+
+.FeaturesCards_description___f1eW {
+  max-width: calc(37.5rem * var(--mantine-scale));
+  margin: auto;
+  text-align: center;
+}
+
+.FeaturesCards_description___f1eW::after {
+    content: '';
+    display: block;
+    background-color: var(--mantine-color-blue-filled);
+    width: calc(2.8125rem * var(--mantine-scale));
+    height: calc(0.125rem * var(--mantine-scale));
+    margin-top: var(--mantine-spacing-sm);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.FeaturesCards_card__P8Hhw {
+  background-color: var(--mantine-color-white);
+}
+
+[data-mantine-color-scheme='dark'] .FeaturesCards_card__P8Hhw {
+  background-color: var(--mantine-color-dark-7);
+}
+
+.FeaturesCards_card__P8Hhw {
+  padding: var(--mantine-spacing-md);
+  border: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-gray-1);
+}
+
+[data-mantine-color-scheme='dark'] .FeaturesCards_card__P8Hhw {
+  border: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-dark-5);
+}
+
+.FeaturesCards_card__P8Hhw {
+  border-radius: var(--mantine-radius-md);
+  height: 100%;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+@media (hover: hover) {
+    .FeaturesCards_card__P8Hhw:hover {
+      transform: scale(1.01);
+      box-shadow: var(--mantine-shadow-md);
+    }
+  }
+
+.FeaturesCards_cardTitle__HoKV1 {
+  font-family: 'Greycliff CF', var(--mantine-font-family);
+  line-height: 1.2;
+}
+
+.FeaturesCards_cardTitle__HoKV1::after {
+    content: '';
+    display: block;
+    background-color: var(--mantine-color-blue-filled);
+    width: calc(2.8125rem * var(--mantine-scale));
+    height: calc(0.125rem * var(--mantine-scale));
+    margin-top: var(--mantine-spacing-sm);
+  }
+
+.FeaturesCards_cardIcon__aF0p1 {
+  color: var(--mantine-color-blue-filled);
+}
+
+@media (min-width: var(--mantine-breakpoint-sm)) {
+  .FeaturesCards_card__P8Hhw {
+    padding: var(--mantine-spacing-xl);
+  }
+
+  .FeaturesCards_cardTitle__HoKV1 {
+    font-size: calc(1.25rem * var(--mantine-scale));
+  }
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./components/HeroTitle/HeroTitle.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+.HeroTitle_wrapper__TNI0T {
+  position: relative;
+  padding-top: calc(5rem * var(--mantine-scale));
+  padding-bottom: calc(3.125rem * var(--mantine-scale));
+  background-image: url('/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+  @media (min-width: var(--mantine-breakpoint-sm)) {.HeroTitle_wrapper__TNI0T {
+    padding-top: calc(11.25rem * var(--mantine-scale));
+    padding-bottom: calc(8.125rem * var(--mantine-scale))
+}
+  }
+
+.HeroTitle_inner__jCp1z {
+  position: relative;
+  z-index: 1;
+}
+
+.HeroTitle_title__aZwQX {
+  font-weight: 800;
+  font-size: calc(1.75rem * var(--mantine-scale));
+  letter-spacing: calc(-0.0625rem * var(--mantine-scale));
+  padding-inline: var(--mantine-spacing-md);
+  color: var(--mantine-color-white);
+  margin-bottom: var(--mantine-spacing-xs);
+  text-align: left;
+  font-family: 'Greycliff CF', var(--mantine-font-family);
+}
+
+@media (min-width: var(--mantine-breakpoint-sm)) {
+
+.HeroTitle_title__aZwQX {
+    font-size: calc(2.5rem * var(--mantine-scale));
+    text-align: center
+}
+  }
+
+.HeroTitle_description___iKgA {
+  color: var(--mantine-color-gray-0);
+  text-align: left;
+  font-size: var(--mantine-font-size-md);
+}
+
+@media (min-width: var(--mantine-breakpoint-sm)) {
+
+.HeroTitle_description___iKgA {
+    text-align: center;
+    font-size: var(--mantine-font-size-xl)
+}
+  }
+
+.HeroTitle_controls___pt1R {
+  margin-top: var(--mantine-spacing-xl);
+}
+
+@media (min-width: var(--mantine-breakpoint-sm)) {
+
+.HeroTitle_controls___pt1R {
+    margin-top: calc(var(--mantine-spacing-xl) * 2);
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--mantine-spacing-md)
+}
+  }
+
+.HeroTitle_control__XO_4v {
+  height: calc(3.375rem * var(--mantine-scale));
+  width: 100%;
+}
+
+@media (min-width: var(--mantine-breakpoint-sm)) {
+
+.HeroTitle_control__XO_4v {
+    width: auto;
+    padding-inline: calc(2.375rem * var(--mantine-scale))
+}
+  }
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./components/NewsletterSignup/NewsletterSignup.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************/
+.NewsletterSignup_wrapper__R3MHn {
+  background-color: var(--mantine-color-white);
+}
+  [data-mantine-color-scheme='dark'] .NewsletterSignup_wrapper__R3MHn {
+  background-color: var(--mantine-color-dark-8);
+}
+  .NewsletterSignup_wrapper__R3MHn {
+  border-top: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-gray-2);
+}
+  [data-mantine-color-scheme='dark'] .NewsletterSignup_wrapper__R3MHn {
+  border-top: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-dark-5);
+}
+
+.NewsletterSignup_title__YIkcU {
+  font-family: 'Greycliff CF', var(--mantine-font-family);
+  font-size: calc(1.5rem * var(--mantine-scale));
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: var(--mantine-spacing-md);
+}
+
+@media (min-width: var(--mantine-breakpoint-sm)) {
+
+.NewsletterSignup_title__YIkcU {
+    font-size: calc(2rem * var(--mantine-scale));
+    margin-bottom: var(--mantine-spacing-lg)
+}
+  }
+
+.NewsletterSignup_description__fIiJa {
+  max-width: calc(30rem * var(--mantine-scale));
+  margin: 0 auto;
+  margin-top: var(--mantine-spacing-md);
+  margin-bottom: var(--mantine-spacing-xl);
+}
+
+@media (min-width: var(--mantine-breakpoint-sm)) {
+
+.NewsletterSignup_description__fIiJa {
+    margin-top: var(--mantine-spacing-xl);
+    margin-bottom: calc(var(--mantine-spacing-xl) * 1.5)
+}
+  }
+
+.NewsletterSignup_controls__lYWyW {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: var(--mantine-breakpoint-sm)) {
+
+.NewsletterSignup_controls__lYWyW {
+    max-width: calc(30rem * var(--mantine-scale));
+    flex-direction: row;
+    gap: var(--mantine-spacing-xs)
+}
+  }
+
+.NewsletterSignup_input__0XndA {
+  background-color: var(--mantine-color-white);
+}
+
+[data-mantine-color-scheme='dark'] .NewsletterSignup_input__0XndA {
+  background-color: var(--mantine-color-dark-6);
+}
+
+.NewsletterSignup_input__0XndA {
+  border-radius: var(--mantine-radius-md);
+  border: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-gray-3);
+}
+
+[data-mantine-color-scheme='dark'] .NewsletterSignup_input__0XndA {
+  border: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-dark-4);
+}
+
+.NewsletterSignup_input__0XndA:focus {
+    border-color: var(--mantine-color-violet-filled);
+  }
+
+@media (min-width: var(--mantine-breakpoint-sm)) {
+
+.NewsletterSignup_input__0XndA {
+    min-width: calc(18.75rem * var(--mantine-scale));
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0
+}
+  }
+
+@media (min-width: var(--mantine-breakpoint-sm)) {
+
+.NewsletterSignup_control__JWbk4 {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0
+}
+  }
+
+.NewsletterSignup_control__JWbk4:hover {
+    background-size: 200%;
+  }
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./components/UpcomingEvents/UpcomingEvents.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************/
+.UpcomingEvents_title__hZmep {
+  font-size: calc(2.125rem * var(--mantine-scale));
+  font-weight: 900;
+}
+
+  @media (max-width: var(--mantine-breakpoint-sm)) {.UpcomingEvents_title__hZmep {
+    font-size: calc(1.5rem * var(--mantine-scale))
+}
+  }
+
+.UpcomingEvents_description__BpArp {
+  max-width: 600px;
+  margin: auto;
+}
+
+.UpcomingEvents_description__BpArp::after {
+    content: '';
+    display: block;
+    background-color: var(--mantine-color-violet-filled);
+    width: 45px;
+    height: 2px;
+    margin-top: var(--mantine-spacing-sm);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.UpcomingEvents_card__bq0oR {
+  background-color: var(--mantine-color-white);
+}
+
+[data-mantine-color-scheme='dark'] .UpcomingEvents_card__bq0oR {
+  background-color: var(--mantine-color-dark-7);
+}
+
+.UpcomingEvents_card__bq0oR {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+  border: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-gray-2);
+}
+
+[data-mantine-color-scheme='dark'] .UpcomingEvents_card__bq0oR {
+  border: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-dark-5);
+}
+
+@media (hover: hover) {
+
+  .UpcomingEvents_card__bq0oR:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--mantine-shadow-md);
+  }
+}
+
+@media (hover: none) {
+
+  .UpcomingEvents_card__bq0oR:active {
+    transform: translateY(-5px);
+    box-shadow: var(--mantine-shadow-md);
+  }
+}
+
+.UpcomingEvents_cardTitle__cFF4o {
+  font-family: 'Greycliff CF', var(--mantine-font-family);
+  line-height: 1.2;
+}
+
+.UpcomingEvents_cardTitle__cFF4o::after {
+    content: '';
+    display: block;
+    background-color: var(--mantine-color-violet-filled);
+    width: 45px;
+    height: 2px;
+    margin-top: var(--mantine-spacing-sm);
+  }
+
