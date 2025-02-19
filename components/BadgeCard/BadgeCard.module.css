@@ -1,0 +1,71 @@
+.card {
+  background-color: var(--mantine-color-body);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  padding: var(--mantine-spacing-md);
+  border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+}
+
+.like {
+  color: var(--mantine-color-red-6);
+  width: rem(20px);
+  height: rem(20px);
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: var(--mantine-font-size-xs);
+  font-weight: 700;
+}
+
+.button {
+  border-radius: var(--mantine-radius-md);
+  flex: 1;
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--mantine-shadow-md);
+    }
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.actionIcon {
+  @media (hover: hover) {
+    &:hover {
+      background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+    }
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.image {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: var(--mantine-breakpoint-sm)) {
+  .section {
+    padding: var(--mantine-spacing-lg);
+  }
+
+  .image {
+    height: rem(180px);
+  }
+}

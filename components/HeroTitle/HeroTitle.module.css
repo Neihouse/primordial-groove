@@ -1,0 +1,66 @@
+.wrapper {
+  position: relative;
+  padding-top: rem(80px);
+  padding-bottom: rem(50px);
+  background-image: url('/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: var(--mantine-breakpoint-sm)) {
+    padding-top: rem(180px);
+    padding-bottom: rem(130px);
+  }
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-weight: 800;
+  font-size: rem(28px);
+  letter-spacing: rem(-1px);
+  padding-inline: var(--mantine-spacing-md);
+  color: var(--mantine-color-white);
+  margin-bottom: var(--mantine-spacing-xs);
+  text-align: left;
+  font-family: 'Greycliff CF', var(--mantine-font-family);
+
+  @media (min-width: var(--mantine-breakpoint-sm)) {
+    font-size: rem(40px);
+    text-align: center;
+  }
+}
+
+.description {
+  color: var(--mantine-color-gray-0);
+  text-align: left;
+  font-size: var(--mantine-font-size-md);
+
+  @media (min-width: var(--mantine-breakpoint-sm)) {
+    text-align: center;
+    font-size: var(--mantine-font-size-xl);
+  }
+}
+
+.controls {
+  margin-top: var(--mantine-spacing-xl);
+
+  @media (min-width: var(--mantine-breakpoint-sm)) {
+    margin-top: calc(var(--mantine-spacing-xl) * 2);
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--mantine-spacing-md);
+  }
+}
+
+.control {
+  height: rem(54px);
+  width: 100%;
+
+  @media (min-width: var(--mantine-breakpoint-sm)) {
+    width: auto;
+    padding-inline: rem(38px);
+  }
+}
