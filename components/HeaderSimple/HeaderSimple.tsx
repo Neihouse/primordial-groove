@@ -1,7 +1,10 @@
 'use client';
 
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import { IconMoonStars, IconSun } from '@tabler/icons-react';
 import {
+  ActionIcon,
   Burger,
   Container,
   Drawer,
@@ -25,49 +28,57 @@ const links = [
 ];
 
 export function HeaderSimple() {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const NavLinks = ({ vertical = false }) => (
-    <Stack gap={vertical ? 'md' : 'xs'}>
+    <Group gap={vertical ? 'md' : 'xs'} className={vertical ? classes.verticalNav : ''}>
       {links.map((link) => (
-        <a
+        <Link
           key={link.label}
           href={link.link}
-          className={classes.link}
-          onClick={(event) => {
-            event.preventDefault();
-            // Add your navigation logic here
+          className={`${classes.link} ${pathname === link.link ? classes.active : ''}`}
+          onClick={() => {
+            if (opened) {
+              close();
+            }
           }}
         >
           {link.label}
-        </a>
+        </Link>
       ))}
-    </Stack>
+    </Group>
   );
 
   return (
     <header className={classes.header}>
       <Container size="lg" className={classes.inner}>
-        <UnstyledButton component="a" href="/">
+        <Link href="/" className={classes.logoLink}>
           <Group gap={10} wrap="nowrap">
             <Image src="/logo.svg" w={30} h={30} alt="Primordial Groove" />
             <Text size="xl" fw={700} className={classes.logoText}>
               Primordial Groove
             </Text>
           </Group>
-        </UnstyledButton>
+        </Link>
 
         {/* Desktop Navigation */}
-        <Group gap={5} visibleFrom="xs">
+        <Group gap={5} hiddenFrom="xs" className={classes.desktopNav}>
           <NavLinks />
-          <Switch
-            checked={colorScheme === 'dark'}
-            onChange={() => toggleColorScheme()}
+          <ActionIcon
+            variant="default"
+            onClick={() => toggleColorScheme()}
             size="lg"
-            onLabel={<IconSun size="1rem" stroke={2.5} />}
-            offLabel={<IconMoonStars size="1rem" stroke={2.5} />}
-          />
+            aria-label="Toggle color scheme"
+          >
+            {colorScheme === 'dark' ? (
+              <IconSun size="1.2rem" stroke={1.5} />
+            ) : (
+              <IconMoonStars size="1.2rem" stroke={1.5} />
+            )}
+          </ActionIcon>
         </Group>
 
         {/* Mobile Navigation */}
@@ -75,7 +86,7 @@ export function HeaderSimple() {
 
         <Drawer
           opened={opened}
-          onClose={toggle}
+          onClose={close}
           size="100%"
           padding="md"
           title="Navigation"

@@ -1,22 +1,28 @@
-import '@mantine/core/styles.css';
-
-import React from 'react';
-import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { FooterCentered } from '@/components/FooterCentered/FooterCentered';
 import { HeaderSimple } from '@/components/HeaderSimple/HeaderSimple';
+
+import '@mantine/core/styles.css';
+
+import type { Metadata } from 'next';
 import { theme } from '../theme';
 
-export const metadata = {
-  title: 'Primordial Groove',
+export const metadata: Metadata = {
+  title: {
+    default: 'Primordial Groove',
+    template: '%s | Primordial Groove',
+  },
   description: 'Building The Bay Area Underground',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
-export default function RootLayout({ children }: { children: any }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" {...mantineHtmlProps}>
+    <html lang="en">
       <head>
         <ColorSchemeScript />
-        <link rel="shortcut icon" href="/favicon.svg" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"

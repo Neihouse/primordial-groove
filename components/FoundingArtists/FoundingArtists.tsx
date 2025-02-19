@@ -10,6 +10,7 @@ import {
   Grid,
   Group,
   Image,
+  SimpleGrid,
   Stack,
   Text,
   Title,
@@ -23,20 +24,7 @@ interface Artist {
 }
 
 export function FoundersGrid({ artists }: { artists: Artist[] }) {
-  // Initialize with a default value
-  const [isMobile, setIsMobile] = useState(true);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(min-width: 768px)');
-    setIsMobile(!mediaQuery.matches);
-
-    const handleResize = (e: MediaQueryListEvent) => {
-      setIsMobile(!e.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleResize);
-    return () => mediaQuery.removeEventListener('change', handleResize);
-  }, []);
+  const isMobile = useMediaQuery('(max-width: 48em)');
 
   // Mobile-first card component
   const ArtistCard = ({ artist }: { artist: Artist }) => (
@@ -158,6 +146,22 @@ export function FoundingArtistsCarousel({ artists }) {
   return (
     <Container size="xl" py="xl">
       {isDesktop ? gridView : carouselView}
+    </Container>
+  );
+}
+
+export function FoundingArtists() {
+  const isMobile = useMediaQuery('(max-width: 48em)');
+
+  return (
+    <Container size="lg">
+      <SimpleGrid
+        cols={{ base: 1, sm: 2, md: 3 }}
+        spacing={{ base: 'md', sm: 'xl' }}
+        verticalSpacing={{ base: 'md', sm: 'xl' }}
+      >
+        {/* ... */}
+      </SimpleGrid>
     </Container>
   );
 }

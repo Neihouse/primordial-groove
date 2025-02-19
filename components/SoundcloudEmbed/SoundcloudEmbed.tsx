@@ -1,6 +1,7 @@
 'use client';
 
-import { Container, Paper, SimpleGrid, Stack, Text, Title } from '@mantine/core';
+import dynamic from 'next/dynamic';
+import { Container, Paper, SimpleGrid, Skeleton, Stack, Text, Title } from '@mantine/core';
 import classes from './SoundcloudEmbed.module.css';
 
 const featuredTracks = [
@@ -24,11 +25,16 @@ const featuredTracks = [
   },
 ];
 
+const DynamicIframe = dynamic(() => import('./IframeComponent'), {
+  ssr: false,
+  loading: () => <Skeleton height={166} radius="md" />,
+});
+
 export function SoundcloudEmbed() {
   const tracks = featuredTracks.map((track) => (
     <Paper key={track.title} radius="md" className={classes.track}>
       <Stack gap="md">
-        <iframe
+        <DynamicIframe
           title={track.title}
           width="100%"
           height="166"
